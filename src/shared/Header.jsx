@@ -7,8 +7,8 @@ const Header = () => {
             <h2 className='title'>All Tested Firmware</h2>
             <div>
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="/">SP & SPD Tool</NavLink>
-                <NavLink to="/">Drivers</NavLink>
+                <NavLink to="/sp-tools">SP Tool</NavLink>
+                <NavLink to="/spd-tools">SPD Tool</NavLink>
                 <NavLink to="/">Blogs</NavLink>
                 <NavLink to="/">Solutions</NavLink>
             </div>

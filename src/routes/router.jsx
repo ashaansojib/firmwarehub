@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../pages/home/Home";
 import Dashboard from "../layout/Dashboard";
+import SPDTools from "../pages/tools/SPDTools";
+import SpTools from "../pages/tools/SpTools";
 
 const router = createBrowserRouter([
     {
@@ -11,6 +13,14 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />
+            },
+            {
+                path: "/spd-tools",
+                element: <SPDTools />
+            },
+            {
+                path: "/sp-tools",
+                element: <SpTools />
             }
         ]
     },

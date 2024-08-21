@@ -2,9 +2,10 @@ import React from 'react';
 
 const Aside = () => {
     return (
-        <div className='border p-2'>
-            sidebar
-        </div>
+        <aside className='border'>
+            <h2 className='p-2 font-bold'>Up Comming..</h2>
+            <h2 className='p-2 font-bold'>Popular Tools..</h2>
+        </aside>
     );
 };
 
