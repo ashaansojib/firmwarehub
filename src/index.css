@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.my-container{
+  @apply max-w-[1150px] mx-auto
+}
+a{
+  @apply font-semibold uppercase px-4 py-3 inline-block hover:bg-slate-100
+}
+input[type=text]:focus {
+  border: 1px solid rgb(15, 204, 15);
+}
+.default-btn{
+  @apply py-1 px-2 font-semibold bg-slate-100 rounded-md
+}
+
+/* header */
+.title{
+  @apply text-2xl font-semibold
+}
+
+/* posting */
+.post{
+  @apply p-2 my-4 rounded-md relative hover:bg-slate-100
+}
+.post:hover h3{
+  color: green;
+}
+.d-btn{
+  @apply border px-3 py-1 rounded-md absolute top-6 right-2
+}
