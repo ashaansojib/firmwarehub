@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
   /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424; */
@@ -15,10 +13,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .my-container{
   @apply max-w-[1150px] mx-auto
 }
-a{
+a:hover{
+  color: green;
+}
+.menu-btn{
   @apply font-semibold uppercase px-4 py-3 inline-block hover:bg-slate-100
 }
 input[type=text]:focus {
@@ -29,6 +31,9 @@ input[type=text]:focus {
 }
 
 /* header */
+header{
+  @apply flex justify-between items-center p-2 bg-slate-50 sticky top-0 left-0 z-30
+}
 .title{
   @apply text-2xl font-semibold
 }
@@ -42,4 +47,7 @@ input[type=text]:focus {
 }
 .d-btn{
   @apply border px-3 py-1 rounded-md absolute top-6 right-2
+}
+.d-link{
+  @apply text-blue-500 italic
 }

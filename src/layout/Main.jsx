@@ -7,9 +7,9 @@ const Main = () => {
     return (
         <div className='my-container'>
             <Header />
-            <div className='grid grid-cols-3 justify-between gap-3 relative'>
-                <div className='sticky top-0 left-0'>
-                <Aside />
+            <div className='grid grid-cols-3 justify-between gap-3'>
+                <div className="sticky top-0 left-0 z-10">
+                    <Aside />
                 </div>
                 <div className='col-span-2 p-2'>
                     <Outlet />

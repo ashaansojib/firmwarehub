@@ -20,7 +20,7 @@ const Home = () => {
                     <span className='text-sm px-2 bg-green-200'>1.9 GB</span>
                     <span className='text-sm px-2 bg-orange-200'>Chipset</span>
                 </div>
-                <Link to="/" className='d-btn'>DOWNLOAD</Link>
+                <Link to="/download/1" className='d-btn'>DOWNLOAD</Link>
             </div>
             <div className='post'>
                 <h3 className='font-semibold pb-4 text-xl'>Symphony L42 Flash File HW2 SC6531E</h3>
@@ -31,7 +31,7 @@ const Home = () => {
                     <span className='text-sm px-2 bg-green-200'>1.9 GB</span>
                     <span className='text-sm px-2 bg-orange-200'>SC6531E</span>
                 </div>
-                <Link to="/" className='d-btn'>DOWNLOAD</Link>
+                <Link to="/download/2" className='d-btn'>DOWNLOAD</Link>
 
             </div>
         </div>
