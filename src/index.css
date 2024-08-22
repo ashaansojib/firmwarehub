@@ -40,7 +40,7 @@ header{
 
 /* posting */
 .post{
-  @apply p-2 my-4 rounded-md relative hover:bg-slate-100
+  @apply relative border-b py-4
 }
 .post:hover h3{
   color: green;

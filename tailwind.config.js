@@ -10,6 +10,9 @@ export default {
         "primary": "#00712D",
         "secondary":"#1E2A5E",
         "accent": "#5BBCFF",
+      },
+      backgroundColor:{
+        "primary": "#F8F6F4",
       }
     },
   },

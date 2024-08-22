@@ -20,8 +20,8 @@ const Downloads = () => {
             <p className='desc'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis voluptate quisquam ab nulla, nesciunt iste, consequatur eaque ipsa veniam deleniti, dolore aperiam at ad quasi alias? Quam doloremque odit voluptatem?</p>
             <p className='desc'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis voluptate quisquam ab nulla, nesciunt iste, consequatur eaque ipsa veniam deleniti, dolore aperiam at ad quasi alias? Quam doloremque odit voluptatem?</p>
             {/* features area */}
-            <h3 className='font-semibold text-xl'>Features & Info:</h3>
-            <div className='text-gray-700 pb-4'>
+            <h3 className='font-semibold text-xl'>Features of Firmware:</h3>
+            <div className='text-secondary pb-4'>
                 <p className='border-b p-2 flex'>
                     <span className='w-20'>Brand</span>
                     <span className='italic'> - Symphony</span>
@@ -51,7 +51,11 @@ const Downloads = () => {
                     <span className='italic'> - Paid</span>
                 </p>
                 <p className='flex border-b p-2'>
-                    <span className='w-20'>Link</span>
+                    <span className='w-20'>File Link</span>
+                    <span className='d-link'> - <Link to="/">Click Here</Link></span>
+                </p>
+                <p className='flex border-b p-2'>
+                    <span className='w-20'>Drivers</span>
                     <span className='d-link'> - <Link to="/">Click Here</Link></span>
                 </p>
                 <p className='flex border-b p-2'>
