@@ -10,7 +10,7 @@ const Upcoming = () => {
             .then(data => setAds(data))
     }, []);
     return (
-        <Marquee pauseOnHover={true} className='border-b'>
+        <Marquee pauseOnHover={true} gradient={true} gradientWidth={30} className='my-4'>
             {
                 ads.map((ad) => <h2 className='px-4' key={ad.id}><Link to={`/download/${ad.id}`}>{ad.name}</Link></h2>)
             }

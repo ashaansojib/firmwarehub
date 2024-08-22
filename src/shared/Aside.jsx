@@ -3,9 +3,11 @@ import Upcoming from '../pages/sidebar/Upcoming';
 
 const Aside = () => {
     return (
-        <aside className='border'>
-            <h2 className='p-2 font-bold'>Popular...</h2>
+        <aside className=''>
             <Upcoming />
+            <div className='h-[400px] flex justify-center items-center bg-slate-50'>
+                <span>google ads here</span>
+            </div>
         </aside>
     );
 };
