@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../shared/Header';
 import Aside from '../shared/Aside';
+import Footer from '../shared/Footer';
 
 const Main = () => {
     return (
@@ -15,6 +16,7 @@ const Main = () => {
                     <Outlet />
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };
