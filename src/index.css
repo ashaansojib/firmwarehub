@@ -35,7 +35,7 @@ header{
   @apply flex justify-between items-center p-2 bg-slate-50 sticky top-0 left-0 z-30
 }
 .title{
-  @apply text-2xl font-semibold
+  @apply text-2xl font-bold text-primary
 }
 
 /* posting */
@@ -49,5 +49,11 @@ header{
   @apply border px-3 py-1 rounded-md absolute top-6 right-2
 }
 .d-link{
-  @apply text-blue-500 italic
+  @apply text-accent italic
+}
+.steps{
+  @apply px-2 py-1 border border-blue-500 rounded-full text-blue-500 font-semibold
+}
+.desc{
+  @apply text-[#1E2A5E] py-2
 }

@@ -12,7 +12,7 @@ const Main = () => {
                 <div className="sticky top-0 left-0 z-10">
                     <Aside />
                 </div>
-                <div className='col-span-2 p-2'>
+                <div className='col-span-2'>
                     <Outlet />
                 </div>
             </div>
