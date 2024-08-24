@@ -57,3 +57,11 @@ header{
 .desc{
   @apply text-[#1E2A5E] py-2
 }
+
+/* footer */
+.footer-link{
+  @apply py-2
+}
+.footer-link li{
+  @apply underline
+}
