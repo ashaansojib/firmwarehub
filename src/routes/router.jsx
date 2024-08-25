@@ -5,6 +5,7 @@ import Dashboard from "../layout/Dashboard";
 import SPDTools from "../pages/tools/SPDTools";
 import SpTools from "../pages/tools/SpTools";
 import Downloads from "../pages/download/Downloads";
+import Blogs from "../pages/blogs/Blogs";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: "/sp-tools",
                 element: <SpTools />
+            },
+            {
+                path: "/blogs",
+                element: <Blogs />
             }
         ]
     },
