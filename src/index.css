@@ -29,7 +29,10 @@ h2{
 h3{
   @apply font-semibold
 }
-.menu-btn{
+.active{
+  @apply font-medium md:font-semibold text-sm uppercase px-4 py-3 block md:inline-block bg-slate-100
+}
+.default{
   @apply font-medium md:font-semibold text-sm uppercase px-4 py-3 block md:inline-block hover:bg-slate-100
 }
 input{
