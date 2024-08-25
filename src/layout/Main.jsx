@@ -6,18 +6,18 @@ import Footer from '../shared/Footer';
 
 const Main = () => {
     return (
-        <div className='my-container'>
+        <main>
             <Header />
-            <div className='grid grid-cols-1 lg:grid-cols-3 justify-between gap-4 relative'>
-                <div className="sticky top-0 left-0 z-10">
+            <div className='home-container'>
+                <div className="md:w-[300px] w-full">
                     <Aside />
                 </div>
-                <div className='col-span-2 p-2 md:p-0'>
+                <div className='w-full p-2 md:p-0'>
                     <Outlet />
                 </div>
             </div>
             <Footer />
-        </div>
+        </main>
     );
 };
 

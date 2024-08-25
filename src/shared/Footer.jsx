@@ -4,7 +4,7 @@ import { FaFacebookF, FaGithub, FaWhatsapp } from 'react-icons/fa6';
 const Footer = () => {
     return (
         <footer className='p-2 bg-slate-100'>
-            <div className='grid grid-cols-3 justify-between'>
+            <div className='grid grid-cols-1 md:grid-cols-3 justify-between my-container'>
                 <div>
                     <h3>Site Links</h3>
                     <ul className='footer-link'>

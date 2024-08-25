@@ -14,7 +14,7 @@ const Comments = () => {
                     <input type="text" placeholder='Your Name' className='border w-full p-2' />
                     <input type="email" placeholder='Your Email' className='border w-full p-2' />
                 </div>
-                <input type="submit" value="POSTED" className='px-4 py-2 bg-primary rounded-md font-semibold cursor-pointer mt-2' />
+                <input type="submit" value="POSTED" className='d-btn' />
             </form>
         </div>
     );
