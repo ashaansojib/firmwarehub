@@ -18,7 +18,7 @@
   @apply max-w-[1100px] mx-auto
 }
 a:hover{
-  color: green;
+  @apply text-primary
 }
 p{
   @apply text-secondary
@@ -30,14 +30,17 @@ h3{
   @apply font-semibold
 }
 .menu-btn{
-  @apply font-semibold uppercase px-4 py-3 inline-block hover:bg-slate-100
+  @apply font-medium md:font-semibold text-sm uppercase px-4 py-3 block md:inline-block hover:bg-slate-100
 }
 input{
   @apply border py-2 px-3 w-full rounded-md
 }
-input[type=text]:focus {
+input[type=email], input[type=text]:focus {
   outline-color: #d0e6f7;
   color: red;
+}
+textarea:focus{
+  outline-color: #d0e6f7;
 }
 .default-btn{
   @apply py-1 px-2 font-semibold bg-slate-100 rounded-md
@@ -70,10 +73,9 @@ header{
 .steps{
   @apply px-2 py-1 border border-blue-500 rounded-full text-blue-500 font-semibold
 }
-/* .desc{
-  @apply text-[#1E2A5E] py-2
-} */
-
+.comment{
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 justify-between items-center
+}
 /* footer */
 .footer-link{
   @apply py-2

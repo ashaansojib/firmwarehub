@@ -9,12 +9,15 @@ const Comments = () => {
                 <span className='text-sm font-medium'>Asha An Sojib</span>
             </div> */}
             <form className='my-4'>
-                <textarea name="" id="" className='border w-full p-2' placeholder='Write your experience...'></textarea>
-                <div className='flex justify-between gap-4'>
-                    <input type="text" placeholder='Your Name' className='border w-full p-2' />
-                    <input type="email" placeholder='Your Email' className='border w-full p-2' />
+                <div className='comment'>
+                    <textarea name="" id="" rows={5} className='border w-full p-2' placeholder='Write your experience...'></textarea>
+
+                    <div className='space-y-2'>
+                        <input type="text" placeholder='Your Name' className='border w-full p-2' />
+                        <input type="email" placeholder='Your Email' className='border w-full p-2' />
+                        <input type="submit" value="SUBMIT" className='d-btn cursor-pointer' />
+                    </div>
                 </div>
-                <input type="submit" value="POSTED" className='d-btn' />
             </form>
         </div>
     );

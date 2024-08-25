@@ -10,7 +10,7 @@ const Home = () => {
     };
     return (
         <div className='py-2'>
-            <div className='flex gap-2 items-center'>
+            <div className='flex flex-col-reverse md:flex-row justify-between gap-2'>
                 <input type="text" placeholder='Type Your File Name...' className='' />
                 {/* <button className='default-btn'>Brand</button> */}
                 <FormControl sx={{ minWidth: 150 }} size="small">
