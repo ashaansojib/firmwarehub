@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header>
             <div className="my-container md:flex justify-between items-center ">
-                <Link to="/"><h2 className='title'>Software & Firmware</h2></Link>
+                <Link to="/"><h1>Software & Firmware</h1></Link>
                 <div>
                     <NavLink className="menu-btn" to="/">Home</NavLink>
                     <NavLink className="menu-btn" to="/sp-tools">SP Tool</NavLink>

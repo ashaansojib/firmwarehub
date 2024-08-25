@@ -13,15 +13,15 @@ const Downloads = () => {
                 <span className='text-secondary italic'>/ Symphony L42 Flash File HW2 SC6531E</span>
             </div>
             {/* title */}
-            <h2 className='title py-1'>Symphony L42 Flash File HW2 SC6531E</h2>
+            <h2 className='py-1'>Symphony L42 Flash File HW2 SC6531E</h2>
             <span className='text-sm px-2 bg-orange-200'>Archive</span>
             <span className='text-sm px-2'>12 Jan, 2024</span>
             {/* description */}
-            <p className='desc'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis voluptate quisquam ab nulla, nesciunt iste, consequatur eaque ipsa veniam deleniti, dolore aperiam at ad quasi alias? Quam doloremque odit voluptatem?</p>
-            <p className='desc'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis voluptate quisquam ab nulla, nesciunt iste, consequatur eaque ipsa veniam deleniti, dolore aperiam at ad quasi alias? Quam doloremque odit voluptatem?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis voluptate quisquam ab nulla, nesciunt iste, consequatur eaque ipsa veniam deleniti, dolore aperiam at ad quasi alias? Quam doloremque odit voluptatem?</p>
+            <p className='py-2'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis voluptate quisquam ab nulla, nesciunt iste, consequatur eaque ipsa veniam deleniti, dolore aperiam at ad quasi alias? Quam doloremque odit voluptatem?</p>
             {/* features area */}
-            <h3 className='font-semibold text-xl'>Features of Firmware:</h3>
-            <div className='text-secondary pb-4'>
+            <h3>Features of Firmware:</h3>
+            <div className='pb-4'>
                 <p className='border-b p-2 flex'>
                     <span className='w-20'>Brand</span>
                     <span className='italic'> - Symphony</span>

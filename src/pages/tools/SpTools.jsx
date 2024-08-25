@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 const SpTools = () => {
     return (
         <div className='py-2'>
-            <h3 className='text-xl font-semibold text-primary'>Major Version of SPD Flash Tools Free.</h3>
-            <p className='text-secondary'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempora itaque, non ullam molestias odio earum. Officiis, fugiat rerum fugit beatae eos id ut, quam numquam inventore veritatis, libero cum.</p>
-            <p className='text-secondary py-2'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempora itaque, non ullam molestias odio earum. Officiis, fugiat rerum fugit beatae eos id ut, quam numquam inventore veritatis, libero cum.</p>
-            <h3 className='font-semibold text-xl'>Features of SPD Tool:</h3>
-            <div className='text-secondary pb-4'>
+            <h2>Major Version of SPD Flash Tools Free.</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempora itaque, non ullam molestias odio earum. Officiis, fugiat rerum fugit beatae eos id ut, quam numquam inventore veritatis, libero cum.</p>
+            <p className='py-2'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum tempora itaque, non ullam molestias odio earum. Officiis, fugiat rerum fugit beatae eos id ut, quam numquam inventore veritatis, libero cum.</p>
+            <h3>Features of SPD Tool:</h3>
+            <div className='pb-4'>
                 <p className='border-b p-2 flex'>
                     <span className='w-20'>Name</span>
                     <span className='italic'> - SPD Flash Tool</span>

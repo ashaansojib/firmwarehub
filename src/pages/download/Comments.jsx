@@ -3,7 +3,7 @@ import React from 'react';
 const Comments = () => {
     return (
         <div className='py-4'>
-            <h4>Comments</h4>
+            <h3>Comments</h3>
             {/* <div className='p-2 bg-slate-100 rounded-md'>
                 <p className='text-gray-700 italic'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <span className='text-sm font-medium'>Asha An Sojib</span>
