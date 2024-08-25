@@ -12,7 +12,7 @@ const Upcoming = () => {
     return (
         <Marquee pauseOnHover={true} gradient={true} gradientWidth={30} className='my-4'>
             {
-                ads.map((ad) => <h2 className='px-4' key={ad.id}><Link to={`/download/${ad.id}`}>{ad.name}</Link></h2>)
+                ads.map((ad) => <h2 className='px-4 underline' key={ad.id}><Link to={`/download/${ad.id}`}>{ad.name}</Link></h2>)
             }
         </Marquee>
     );
