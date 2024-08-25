@@ -6,6 +6,7 @@ import SPDTools from "../pages/tools/SPDTools";
 import SpTools from "../pages/tools/SpTools";
 import Downloads from "../pages/download/Downloads";
 import Blogs from "../pages/blogs/Blogs";
+import Posts from "../pages/dashboard/firmwares/Posts";
 
 const router = createBrowserRouter([
     {
@@ -35,8 +36,14 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path: "/dash/admin",
-        element: <Dashboard />
+        path: "/admin",
+        element: <Dashboard />,
+        children: [
+            {
+                path: '/admin/posts',
+                element: <Posts />
+            }
+        ]
     }, {
         path: "*",
         element: <p>Go back</p>
