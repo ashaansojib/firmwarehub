@@ -9,7 +9,7 @@ const Main = () => {
         <main>
             <Header />
             <div className='home-container'>
-                <div className="md:w-[300px] w-full">
+                <div className="md:w-[300px] w-full p-2 md:p-0">
                     <Aside />
                 </div>
                 <div className='w-full p-2 md:p-0'>
