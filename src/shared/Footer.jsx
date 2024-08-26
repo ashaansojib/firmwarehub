@@ -3,8 +3,8 @@ import { FaFacebookF, FaGithub, FaWhatsapp } from 'react-icons/fa6';
 
 const Footer = () => {
     return (
-        <footer className='p-2 bg-slate-100'>
-            <div className='grid grid-cols-1 md:grid-cols-3 justify-between my-container'>
+        <footer className='text-secondary bg-primary'>
+            <div className='p-2 grid grid-cols-1 md:grid-cols-3 justify-between my-container border-b'>
                 <div>
                     <p>Site Links</p>
                     <ul className='footer-link'>
@@ -30,7 +30,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <p className='text-center '>2024@ Owner by Sojib | in Bangladesh</p>
+            <p className='text-center py-4 '>2024@ Owner by Sojib | in Bangladesh</p>
         </footer>
     );
 };

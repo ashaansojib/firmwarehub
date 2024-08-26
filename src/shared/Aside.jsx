@@ -6,6 +6,7 @@ const Aside = () => {
         <aside className='py-2 md:w-[300px] '>
             <img className='w-full cursor-pointer' src="/any-tool.png" alt="" />
             {/* recent post */}
+            <p className='py-1 italic font-medium border-b'>Recent Blogs</p>
             <RecentPost />
             <div className='h-[400px] flex justify-center items-center border my-2'>
                 <span>google ads here</span>
