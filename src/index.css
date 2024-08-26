@@ -86,3 +86,11 @@ header{
 .footer-link li{
   @apply underline
 }
+
+/* dashboard */
+.dashboard-menu{
+  @apply flex gap-2 px-3 py-2 hover:bg-[#9eabf5] hover:text-white rounded-md
+}
+.d-active{
+  @apply flex gap-2 px-3 py-2 bg-[#9eabf5] text-white rounded-md
+}
