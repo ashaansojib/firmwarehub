@@ -7,6 +7,7 @@ import SpTools from "../pages/tools/SpTools";
 import Downloads from "../pages/download/Downloads";
 import Blogs from "../pages/blogs/Blogs";
 import Posts from "../pages/dashboard/firmwares/Posts";
+import ErrorPage from "../shared/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
         ]
     }, {
         path: "*",
-        element: <p>Go back</p>
+        element: <ErrorPage />
     }
 ]);
 export default router;
