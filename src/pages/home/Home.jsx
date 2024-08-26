@@ -36,18 +36,18 @@ const Home = () => {
                 {/* <button className='default-btn'>Countries</button> */}
             </div>
             {/* files area */}
-            <div className='post'>
+            <article className='post'>
                 <h3 className='pb-2'>Oppo F21s EFS Reset Firmware v12.3.00</h3>
-                <div className='space-x-1 text-sm'>
+                <div className='space-x-1 text-sm py-1'>
                     <span className=' px-2 text-white bg-red-400'>Paid</span>
                     {/* <span className='text-sm px-2 text-white bg-green-400'>Free</span> */}
                     <span className='px-2 bg-green-50'>1.9 GB</span>
                     <span className='px-2 bg-orange-50'>Chipset</span>
                     <span className='px-2 bg-gray-50'>Jan 2024</span>
                 </div>
-                <Link to="/download/1" className='d-btn absolute top-6 right-2'>DOWNLOAD</Link>
-            </div>
-            <div className='post'>
+                <Link to="/download/1" className='post-btn'>DOWNLOAD</Link>
+            </article>
+            <article className='post'>
                 <h3 className='pb-4'>Symphony L42 Flash File HW2 SC6531E</h3>
                 <div className='space-x-1 text-sm'>
                     <span className=' px-2 text-white bg-red-400'>Paid</span>
@@ -56,10 +56,10 @@ const Home = () => {
                     <span className='px-2 bg-orange-50'>Chipset</span>
                     <span className='px-2 bg-gray-50'>Jan 2024</span>
                 </div>
-                <Link to="/download/1" className='d-btn absolute top-6 right-2'>DOWNLOAD</Link>
+                <Link to="/download/1" className='post-btn'>DOWNLOAD</Link>
 
-            </div>
-            <div className='post'>
+            </article>
+            <article className='post'>
                 <h3 className='pb-4'>Xiaomi Note 9 Flash File MT6765</h3>
                 <div className='space-x-1 text-sm'>
                     <span className=' px-2 text-white bg-red-400'>Paid</span>
@@ -68,10 +68,10 @@ const Home = () => {
                     <span className='px-2 bg-orange-50'>Chipset</span>
                     <span className='px-2 bg-gray-50'>Jan 2024</span>
                 </div>
-                <Link to="/download/1" className='d-btn absolute top-6 right-2'>DOWNLOAD</Link>
+                <Link to="/download/1" className='post-btn'>DOWNLOAD</Link>
 
-            </div>
-            <div className='post'>
+            </article>
+            <article className='post'>
                 <h3 className='pb-4'>Bravo B901 Flash File SC6531E</h3>
                 <div className='space-x-1 text-sm'>
                     {/* <span className=' px-2 text-white bg-red-400'>Paid</span> */}
@@ -80,10 +80,10 @@ const Home = () => {
                     <span className='px-2 bg-orange-50'>Chipset</span>
                     <span className='px-2 bg-gray-50'>Jan 2024</span>
                 </div>
-                <Link to="/download/1" className='d-btn absolute top-6 right-2'>DOWNLOAD</Link>
+                <Link to="/download/1" className='post-btn'>DOWNLOAD</Link>
 
-            </div>
-            <div className='post'>
+            </article>
+            <article className='post'>
                 <h3 className='pb-4'>Lava Benco P30 Flash File HW2 SC6531E</h3>
                 <div className='space-x-1 text-sm'>
                     <span className=' px-2 text-white bg-red-400'>Paid</span>
@@ -92,10 +92,10 @@ const Home = () => {
                     <span className='px-2 bg-orange-50'>Chipset</span>
                     <span className='px-2 bg-gray-50'>Jan 2024</span>
                 </div>
-                <Link to="/download/1" className='d-btn absolute top-6 right-2'>DOWNLOAD</Link>
+                <Link to="/download/1" className='post-btn'>DOWNLOAD</Link>
 
-            </div>
-            <div className='post'>
+            </article>
+            <article className='post'>
                 <h3 className='pb-4'>Tinmo F21 Flash File MT6261DA</h3>
                 <div className='space-x-1 text-sm'>
                     <span className=' px-2 text-white bg-red-400'>Paid</span>
@@ -104,10 +104,10 @@ const Home = () => {
                     <span className='px-2 bg-orange-50'>Chipset</span>
                     <span className='px-2 bg-gray-50'>Jan 2024</span>
                 </div>
-                <Link to="/download/1" className='d-btn absolute top-6 right-2'>DOWNLOAD</Link>
+                <Link to="/download/1" className='post-btn'>DOWNLOAD</Link>
 
-            </div>
-            <div className='post'>
+            </article>
+            <article className='post'>
                 <h3 className='pb-4'>Itel IT2127 Flash File HW2 SC6531E</h3>
                 <div className='space-x-1 text-sm'>
                     {/* <span className=' px-2 text-white bg-red-400'>Paid</span> */}
@@ -116,9 +116,9 @@ const Home = () => {
                     <span className='px-2 bg-orange-50'>Chipset</span>
                     <span className='px-2 bg-gray-50'>Jan 2024</span>
                 </div>
-                <Link to="/download/1" className='d-btn absolute top-6 right-2'>DOWNLOAD</Link>
+                <Link to="/download/1" className='post-btn'>DOWNLOAD</Link>
 
-            </div>
+            </article>
             <div className='py-3 flex justify-center'>
                 <Pagination count={10} shape="rounded" />
             </div>

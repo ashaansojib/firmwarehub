@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
 
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const navBar = <>
 
