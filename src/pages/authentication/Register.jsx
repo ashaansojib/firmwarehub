@@ -1,15 +1,18 @@
 import { Checkbox, FormControlLabel } from '@mui/material';
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
-import { FaFacebookF, FaGoogle } from 'react-icons/fa6';
+import { FaFacebookF, FaGithub, FaGoogle } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const Register = () => {
     return (
         <section className='middle-container'>
             <div className='middle-content w-[450px]'>
                 <Link to="/"><h2>SoftFirm.com</h2></Link>
                 <form>
+                    <div className='py-2'>
+                        <p>Full Name</p>
+                        <input type="email" placeholder='Your Name' name="" id="" />
+                    </div>
                     <div className='py-2'>
                         <p>Email Address</p>
                         <input type="email" placeholder='Your Email' name="" id="" />
@@ -18,11 +21,8 @@ const Login = () => {
                         <p>Password</p>
                         <input type="password" placeholder='Enter Password' name="" id="" />
                     </div>
-                    <div className='flex justify-between items-end'>
-                        <FormControlLabel control={<Checkbox />} label="Accept Terms & Conditions" />
-                        <span className='inline-block text-accent pb-2'>Forget Password?</span>
-                    </div>
-                        <input type="submit" value="Login" className='d-active' />
+                    <FormControlLabel control={<Checkbox />} label="Accept Terms & Conditions" />
+                    <input type="submit" value="Register" className='d-active' />
                 </form>
                 <p className='text-center pt-4'>Or</p>
                 <div className='flex gap-4 justify-center py-4'>
@@ -30,10 +30,10 @@ const Login = () => {
                     <Link><FaGoogle className='text-2xl' /></Link>
                     <Link><FaFacebookF className='text-2xl' /></Link>
                 </div>
-                <p className='text-center pt-2'>Don't have any account? <Link to="/user/register" className='inline-block text-accent'>Register</Link> </p>
+                <p className='text-center pt-2'>Already have account? <Link to="/user/login" className='inline-block text-accent'>Login</Link> </p>
             </div>
         </section>
     );
 };
 
-export default Login;
+export default Register;
