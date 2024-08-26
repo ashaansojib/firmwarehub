@@ -8,6 +8,7 @@ import Downloads from "../pages/download/Downloads";
 import Blogs from "../pages/blogs/Blogs";
 import Posts from "../pages/dashboard/firmwares/Posts";
 import ErrorPage from "../shared/ErrorPage";
+import Login from "../pages/authentication/Login";
 
 const router = createBrowserRouter([
     {
@@ -45,7 +46,12 @@ const router = createBrowserRouter([
                 element: <Posts />
             }
         ]
-    }, {
+    },
+    {
+        path: "/user/login",
+        element: <Login />
+    },
+    {
         path: "*",
         element: <ErrorPage />
     }

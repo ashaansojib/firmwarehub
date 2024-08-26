@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
     return (
-        <div className='w-full bg-slate-100 md:flex justify-center items-center md:h-screen'>
-            <div className=' bg-white p-4 rounded-md text-center'>
+        <div className='middle-container'>
+            <div className=' middle-content text-center'>
                 <h2>You didn't reach the page.</h2>
                 <p>Do you want to back home?</p>
                 <div className='flex justify-center'>

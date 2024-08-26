@@ -38,7 +38,7 @@ h3{
 input{
   @apply border py-2 px-3 w-full rounded-md
 }
-input[type=email], input[type=text]:focus {
+input[type=email], input[type=password], input[type=text]:focus {
   outline-color: #d0e6f7;
   color: red;
 }
@@ -92,5 +92,13 @@ header{
   @apply flex gap-2 px-3 py-2 hover:bg-[#9eabf5] hover:text-white rounded-md
 }
 .d-active{
-  @apply flex gap-2 px-3 py-2 bg-[#9eabf5] text-white rounded-md
+  @apply flex gap-2 px-3 py-2 bg-[#9eabf5] text-white rounded-md cursor-pointer
+}
+
+/* login error */
+.middle-container{
+  @apply bg-slate-100 md:flex justify-center items-center md:h-screen
+}
+.middle-content{
+  @apply bg-white p-4 rounded-md text-secondary
 }
