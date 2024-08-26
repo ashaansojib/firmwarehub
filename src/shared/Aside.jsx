@@ -1,18 +1,15 @@
 import React from 'react';
-import Upcoming from '../pages/sidebar/Upcoming';
 import RecentPost from '../pages/sidebar/RecentPost';
 
 const Aside = () => {
     return (
-        <aside className=''>
-            <Upcoming />
-            <img src="/poster.png" alt="" />
+        <aside className='py-2 md:w-[300px] '>
+            <img className='w-full cursor-pointer' src="/any-tool.png" alt="" />
+            {/* recent post */}
+            <RecentPost />
             <div className='h-[400px] flex justify-center items-center border my-2'>
                 <span>google ads here</span>
             </div>
-
-            {/* recent post */}
-            <RecentPost />
         </aside>
     );
 };

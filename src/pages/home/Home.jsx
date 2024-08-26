@@ -1,6 +1,7 @@
 import { Button, FormControl, InputLabel, MenuItem, Pagination, Select } from '@mui/material';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Upcoming from '../sidebar/Upcoming';
 
 const Home = () => {
     const [age, setAge] = useState('');
@@ -10,6 +11,7 @@ const Home = () => {
     };
     return (
         <div className='py-2'>
+            <Upcoming />
             <div className='flex flex-col-reverse md:flex-row justify-between gap-2'>
                 <input type="text" placeholder='Type Your File Name...' className='' />
                 {/* <button className='default-btn'>Brand</button> */}
