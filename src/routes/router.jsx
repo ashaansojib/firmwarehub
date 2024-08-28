@@ -10,6 +10,7 @@ import Posts from "../pages/dashboard/firmwares/Posts";
 import ErrorPage from "../shared/ErrorPage";
 import Login from "../pages/authentication/Login";
 import Register from "../pages/authentication/Register";
+import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
     {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/admin",
-        element: <Dashboard />,
+        element: <PrivetRoute><Dashboard /></PrivetRoute>,
         children: [
             {
                 path: '/admin/posts',
