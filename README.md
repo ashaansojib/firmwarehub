@@ -5,6 +5,7 @@
 * npm i axios
 * npm install react-hook-form
 * npm install @reduxjs/toolkit react-redux
+* npm install react-loader-spinner --save
 
 
 <!-- steps for authentication -->

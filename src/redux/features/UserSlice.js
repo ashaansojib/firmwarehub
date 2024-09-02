@@ -19,8 +19,16 @@ export const usersApi = createApi({
         body: data,
       }),
     }),
+    makeAdmin: builder.mutation({
+      query: ({ data, id }) => ({
+        url: `/users/${id}`,
+        method: "PUT",
+        body: data,
+      }),
+    }),
   }),
 });
 
 // Export hooks for usage in functional components
-export const { useGetUsersQuery, useAddUserMutation } = usersApi;
+export const { useGetUsersQuery, useAddUserMutation, useMakeAdminMutation } =
+  usersApi;
