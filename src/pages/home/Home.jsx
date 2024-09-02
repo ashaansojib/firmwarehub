@@ -8,17 +8,17 @@ import {
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Upcoming from "../sidebar/Upcoming";
-import MyLoader from "../../components/MyLoader";
+import { useGetFirmwaresQuery } from "../../redux/features/PostSlice";
 
 const Home = () => {
   const [age, setAge] = useState("");
-
+  const { data } = useGetFirmwaresQuery();
+  console.log(data);
   const handleChange = (event) => {
     setAge(event.target.value);
   };
   return (
     <div className="py-2">
-        <MyLoader />
       <Upcoming />
       <div className="flex flex-col-reverse md:flex-row justify-between gap-2">
         <input type="text" placeholder="Type Your File Name..." className="" />
@@ -49,9 +49,7 @@ const Home = () => {
       <article className="post">
         <h3 className="pb-2">Oppo F21s EFS Reset Firmware v12.3.00</h3>
         <div className="space-x-1 text-sm py-1">
-          <span className=" px-2 text-white bg-red-400">
-            Paid
-          </span>
+          <span className=" px-2 text-white bg-red-400">Paid</span>
           {/* <span className='text-sm px-2 text-white bg-green-400'>Free</span> */}
           <span className="px-2 bg-green-50">1.9 GB</span>
           <span className="px-2 bg-orange-50">Chipset</span>

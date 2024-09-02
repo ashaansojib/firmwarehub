@@ -1,17 +1,20 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useAddFirmwareMutation } from "../../../redux/features/PostSlice";
 
 const Posts = () => {
+  const [addPost] = useAddFirmwareMutation();
   const {
     register,
     handleSubmit,
-    watch,
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
-    
-  }
+    addPost(data);
+    reset();
+  };
   return (
     <section className="p-2">
       <h3>Create a new Posts</h3>
@@ -24,7 +27,7 @@ const Posts = () => {
               placeholder="Write a title..."
             />
             <textarea
-              {...register("description", { required: true })}
+              {...register("desc", { required: true })}
               placeholder="Write a short description..."
               rows={4}
             ></textarea>
@@ -77,7 +80,7 @@ const Posts = () => {
               />
               <input
                 type="text"
-                {...register("Size", { required: true })}
+                {...register("size", { required: true })}
                 placeholder="File Size..."
               />
               <input
