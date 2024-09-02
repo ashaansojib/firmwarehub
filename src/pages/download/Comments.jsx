@@ -10,7 +10,7 @@ const Comments = () => {
             </div> */}
             <form className='my-4'>
                 <div className='comment'>
-                    <textarea name="" id="" rows={5} className='border w-full p-2' placeholder='Write your experience...'></textarea>
+                    <textarea name="" id="" rows={5} placeholder='Write your experience...'></textarea>
 
                     <div className='space-y-2'>
                         <input type="text" placeholder='Your Name' className='border w-full p-2' />

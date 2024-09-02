@@ -42,6 +42,15 @@ input[type=email], input[type=password], input[type=text]:focus {
   outline-color: #d0e6f7;
   color: red;
 }
+textarea{
+  outline-color: #d0e6f7;
+  color: red;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+}
 textarea:focus{
   outline-color: #d0e6f7;
 }

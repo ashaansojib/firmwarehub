@@ -37,7 +37,9 @@ const DashboardAside = () => {
         </ul>
         <span className="py-3 inline-block text-sm">Services</span>
         <ul>
-          <NavLink to="/" className="dashboard-menu">
+          <NavLink to="/" className={`${
+              loca.pathname === "/admin/posts" ? "d-active" : "dashboard-menu"
+            }`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
