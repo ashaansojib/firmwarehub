@@ -3,22 +3,16 @@ import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../auth/AuthProvider";
-import {
-  useAddUserMutation,
-  useGetUsersQuery,
-} from "../../redux/features/UserSlice";
+import { useAddUserMutation } from "../../redux/features/UserSlice";
 
 const Register = () => {
-  const { data } = useGetUsersQuery([]);
-  const [addUser, { isLoading }] = useAddUserMutation();
-  console.log(data);
+  const [addUser] = useAddUserMutation();
   const navigate = useNavigate();
 
   const { createUser } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
-    watch,
     reset,
     formState: { errors },
   } = useForm();
@@ -37,7 +31,7 @@ const Register = () => {
       email: data.email,
     };
     await addUser(UD);
-    navigate("/");
+    navigate("/admin");
     reset();
   };
   return (

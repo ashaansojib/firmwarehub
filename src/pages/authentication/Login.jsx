@@ -1,18 +1,31 @@
 import { Checkbox, FormControlLabel } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebookF, FaGoogle } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../auth/AuthProvider";
 
 const Login = () => {
+  const { userLogin } = useContext(AuthContext);
+  const naviagate = useNavigate();
   const {
     register,
     handleSubmit,
-    watch,
+    reset,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    userLogin(data.email, data.password)
+      .then((result) => {
+        // console.log(result);
+        naviagate("/admin");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+    reset();
+  };
   return (
     <section className="middle-container">
       <div className="middle-content w-[450px]">
@@ -22,11 +35,19 @@ const Login = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="py-2">
             <p>Email Address</p>
-            <input type="email" placeholder="Your Email" {...register("email", {required: true})} />
+            <input
+              type="email"
+              placeholder="Your Email"
+              {...register("email", { required: true })}
+            />
           </div>
           <div className="py-2">
             <p>Password</p>
-            <input type="password" placeholder="Enter Password" {...register("password", {required: true})} />
+            <input
+              type="password"
+              placeholder="Enter Password"
+              {...register("password", { required: true })}
+            />
           </div>
           <div className="flex justify-between items-end">
             <FormControlLabel
