@@ -6,7 +6,7 @@
 * npm install react-hook-form
 * npm install @reduxjs/toolkit react-redux
 * npm install react-loader-spinner --save
-
+* npm install moment --save
 
 <!-- steps for authentication -->
 1. 

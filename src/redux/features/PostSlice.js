@@ -14,6 +14,11 @@ export const postApi = createApi({
         body: data,
       }),
     }),
+    singleFirmware: builder.mutation({
+      query: (id) => ({
+        url: `/firmwares/${id}`,
+      }),
+    }),
     removeFirmware: builder.mutation({
       query: (id) => ({
         url: `/firmwares/${id}`,
@@ -26,4 +31,5 @@ export const {
   useGetFirmwaresQuery,
   useAddFirmwareMutation,
   useRemoveFirmwareMutation,
+  useSingleFirmwareMutation,
 } = postApi;

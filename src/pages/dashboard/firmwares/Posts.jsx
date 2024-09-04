@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useAddFirmwareMutation } from "../../../redux/features/PostSlice";
 
 const Posts = () => {
-  const [addPost] = useAddFirmwareMutation();
+  const [addPost, {isLoading}] = useAddFirmwareMutation();
   const {
     register,
     handleSubmit,
@@ -89,7 +89,7 @@ const Posts = () => {
                 placeholder="File Price..."
               />
             </div>
-            <input type="submit" value="Publish" className="d-active" />
+            <input type="submit" value={`${isLoading ? "Please Wait" : "Publish"}`} className="d-active" />
           </div>
         </div>
       </form>

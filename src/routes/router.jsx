@@ -22,8 +22,9 @@ const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "/download/:id",
-                element: <Downloads />
+                path: "/page/:filename",
+                element: <Downloads />,
+                loader: ({params})=> fetch(`http://localhost:9988/api/firmwares/${params.filename}`)
             },
             {
                 path: "/spd-tools",
