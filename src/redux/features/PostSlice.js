@@ -5,7 +5,7 @@ export const postApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:9988/api" }),
   endpoints: (builder) => ({
     getFirmwares: builder.query({
-      query: () => "/firmwares",
+      query: ({page, limit}) => `/firmwares?page=${page}&limit=${limit}`,
     }),
     addFirmware: builder.mutation({
       query: (data) => ({

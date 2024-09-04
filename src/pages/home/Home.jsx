@@ -2,10 +2,10 @@ import {
   FormControl,
   InputLabel,
   MenuItem,
-  Pagination,
   Select,
+  TablePagination,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Upcoming from "../sidebar/Upcoming";
 import { useGetFirmwaresQuery } from "../../redux/features/PostSlice";
@@ -15,12 +15,25 @@ import moment from "moment";
 const Home = () => {
   const [search, setSearch] = useState("");
   const [brand, setBrand] = useState("");
-  const { data: firmwares, isLoading } = useGetFirmwaresQuery([]);
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const {
+    data: firmwares,
+    isLoading,
+    refetch,
+  } = useGetFirmwaresQuery({
+    page: page + 1,
+    limit: rowsPerPage,
+  });
   // console.log(firmwares.data);
-  
+
   const handleChange = (event) => {
     setBrand(event.target.value);
   };
+  useEffect(() => {
+    refetch();
+  }, [page, rowsPerPage, refetch]);
+  console.log(page, rowsPerPage);
   return (
     <div className="py-2">
       <Upcoming />
@@ -86,7 +99,9 @@ const Home = () => {
                   </span>
                   <span className="px-2 bg-green-50">{firm.size}</span>
                   <span className="px-2 bg-orange-50">{firm.chipset}</span>
-                  <span className="px-2 bg-gray-50">{moment(firm.createdAt).format('DD MMM, YYYY')}</span>
+                  <span className="px-2 bg-gray-50">
+                    {moment(firm.createdAt).format("DD MMM, YYYY")}
+                  </span>
                 </div>
                 <Link to={`/page/${firm.filename}`} className="post-btn">
                   DOWNLOAD
@@ -97,7 +112,17 @@ const Home = () => {
       )}
 
       <div className="py-3 flex justify-center">
-        <Pagination count={10} shape="rounded" />
+      <TablePagination
+          component="div"
+          count={firmwares?.count || 0}
+          onPageChange={(e, newPage) => setPage(newPage)}
+          onRowsPerPageChange={(event) =>
+            setRowsPerPage(parseInt(event.target.value))
+          }
+          page={page}
+          rowsPerPage={rowsPerPage}
+          rowsPerPageOptions={[5, 10, 20, 30]}
+        />
       </div>
     </div>
   );
