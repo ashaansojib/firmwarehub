@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useAddFirmwareMutation } from "../../../redux/features/PostSlice";
+import { DTitile } from "../../../components/DTitle";
 
 const Posts = () => {
   const [addPost, {isLoading}] = useAddFirmwareMutation();
@@ -17,7 +18,7 @@ const Posts = () => {
   };
   return (
     <section className="p-2">
-      <h3>Create a new Posts</h3>
+      <DTitile title="Create a new Posts" />
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid grid-cols-1 gap-2 md:grid-cols-4 py-3 px-2">
           <div className="col-span-3">

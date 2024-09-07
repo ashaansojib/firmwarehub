@@ -34,7 +34,6 @@ const Home = () => {
   useEffect(() => {
     refetch();
   }, [page, rowsPerPage, refetch]);
-  console.log(page, rowsPerPage);
   return (
     <div className="py-2">
       <Upcoming />

@@ -6,7 +6,12 @@ export const postApi = createApi({
   tagTypes: ["firmware"],
   endpoints: (builder) => ({
     getFirmwares: builder.query({
-      query: ({ page, limit, brand }) => `/firmwares?page=${page}&limit=${limit}&brand=${brand}`,
+      query: ({ page, limit, brand }) =>
+        `/firmwares?page=${page}&limit=${limit}&brand=${brand}`,
+      providesTags: ["firmware"],
+    }),
+    allFirmwares: builder.query({
+      query: () => `/firmwares`,
       providesTags: ["firmware"],
     }),
     addFirmware: builder.mutation({
@@ -15,7 +20,7 @@ export const postApi = createApi({
         method: "POST",
         body: data,
       }),
-      invalidatesTags: ["firmware"]
+      invalidatesTags: ["firmware"],
     }),
     singleFirmware: builder.mutation({
       query: (id) => ({
@@ -27,7 +32,7 @@ export const postApi = createApi({
         url: `/firmwares/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: ["firmware"]
+      invalidatesTags: ["firmware"],
     }),
   }),
 });
@@ -36,4 +41,5 @@ export const {
   useAddFirmwareMutation,
   useRemoveFirmwareMutation,
   useSingleFirmwareMutation,
+  useAllFirmwaresQuery
 } = postApi;

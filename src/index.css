@@ -82,9 +82,6 @@ header{
 .d-link{
   @apply text-accent italic
 }
-.steps{
-  @apply px-2 py-1 border border-blue-500 rounded-full text-blue-500 font-semibold
-}
 .comment{
   @apply grid grid-cols-1 md:grid-cols-2 gap-4 justify-between items-center
 }
