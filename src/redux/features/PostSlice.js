@@ -3,9 +3,11 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const postApi = createApi({
   reducerPath: "postApi",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:9988/api" }),
+  tagTypes: ["firmware"],
   endpoints: (builder) => ({
     getFirmwares: builder.query({
-      query: ({page, limit}) => `/firmwares?page=${page}&limit=${limit}`,
+      query: ({ page, limit, brand }) => `/firmwares?page=${page}&limit=${limit}&brand=${brand}`,
+      providesTags: ["firmware"],
     }),
     addFirmware: builder.mutation({
       query: (data) => ({
@@ -13,6 +15,7 @@ export const postApi = createApi({
         method: "POST",
         body: data,
       }),
+      invalidatesTags: ["firmware"]
     }),
     singleFirmware: builder.mutation({
       query: (id) => ({
@@ -24,6 +27,7 @@ export const postApi = createApi({
         url: `/firmwares/${id}`,
         method: "DELETE",
       }),
+      invalidatesTags: ["firmware"]
     }),
   }),
 });

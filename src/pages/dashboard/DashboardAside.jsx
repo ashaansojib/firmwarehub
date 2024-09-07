@@ -56,7 +56,9 @@ const DashboardAside = () => {
             </svg>
             <span>Add Product</span>
           </NavLink>
-          <NavLink to="/" className="dashboard-menu">
+          <NavLink to="/admin/manage-post" className={`${
+              loca.pathname === "/admin/manage-post" ? "d-active" : "dashboard-menu"
+            }`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

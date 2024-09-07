@@ -16,7 +16,7 @@ const Home = () => {
   const [search, setSearch] = useState("");
   const [brand, setBrand] = useState("");
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(15);
   const {
     data: firmwares,
     isLoading,
@@ -24,6 +24,7 @@ const Home = () => {
   } = useGetFirmwaresQuery({
     page: page + 1,
     limit: rowsPerPage,
+    brand: brand,
   });
   // console.log(firmwares.data);
 
@@ -57,15 +58,15 @@ const Home = () => {
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            <MenuItem value="Oppo">Oppo</MenuItem>
-            <MenuItem value="Vivo">Vivo</MenuItem>
-            <MenuItem value="Xiaomi">Xiaomi</MenuItem>
-            <MenuItem value="Realme">Realme</MenuItem>
-            <MenuItem value="Symphony">Symphony</MenuItem>
-            <MenuItem value="Itel">Itel</MenuItem>
-            <MenuItem value="Tecno">Tecno</MenuItem>
-            <MenuItem value="Infinix">Infinix</MenuItem>
-            <MenuItem value="Featured">Featured</MenuItem>
+            <MenuItem value="oppo">Oppo</MenuItem>
+            <MenuItem value="vivo">Vivo</MenuItem>
+            <MenuItem value="xiaomi">Xiaomi</MenuItem>
+            <MenuItem value="realme">Realme</MenuItem>
+            <MenuItem value="symphony">Symphony</MenuItem>
+            <MenuItem value="itel">Itel</MenuItem>
+            <MenuItem value="tecno">Tecno</MenuItem>
+            <MenuItem value="infinix">Infinix</MenuItem>
+            <MenuItem value="featured">Featured</MenuItem>
           </Select>
         </FormControl>
         {/* <Button variant='contained' size='small'>brand</Button>
@@ -112,7 +113,7 @@ const Home = () => {
       )}
 
       <div className="py-3 flex justify-center">
-      <TablePagination
+        <TablePagination
           component="div"
           count={firmwares?.count || 0}
           onPageChange={(e, newPage) => setPage(newPage)}
@@ -121,7 +122,7 @@ const Home = () => {
           }
           page={page}
           rowsPerPage={rowsPerPage}
-          rowsPerPageOptions={[5, 10, 20, 30]}
+          rowsPerPageOptions={[15, 25]}
         />
       </div>
     </div>
