@@ -98,7 +98,7 @@ header{
   @apply flex gap-2 px-3 py-2 hover:bg-[#9eabf5] hover:text-white rounded-md my-1
 }
 .d-active{
-  @apply flex gap-2 px-3 py-2 bg-[#9eabf5] text-white rounded-md cursor-pointer my-1
+  @apply flex gap-2 px-3 py-2 bg-[#9eabf5] text-white rounded-md cursor-pointer
 }
 
 /* login error */
