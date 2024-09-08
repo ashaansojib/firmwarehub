@@ -4,10 +4,16 @@ import Comments from "./Comments";
 import Steps from "./Steps";
 import Disclaimer from "./Disclaimer";
 import moment from "moment";
+import { useForm } from "react-hook-form";
+import {
+  useAddCommentMutation,
+  useGetCommentsQuery,
+} from "../../redux/features/CommentSlice";
+import MyLoader from "../../components/MyLoader";
 
 const Downloads = () => {
+  const [addComment, { isLoading }] = useAddCommentMutation();
   const data = useLoaderData();
-//   console.log(data?.data);
   const {
     title,
     filename,
@@ -18,12 +24,26 @@ const Downloads = () => {
     price,
     desc,
     link,
-    image,
     version,
     category,
     size,
     createdAt,
+    _id,
   } = data?.data;
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const { data: comments, refetch } = useGetCommentsQuery({ id: _id });
+  const onSubmit = (data) => {
+    data.postId = _id;
+    addComment(data);
+    reset();
+  };
   return (
     <>
       {/* breadcumb tags */}
@@ -81,7 +101,10 @@ const Downloads = () => {
         <p className="flex border-b p-2">
           <span className="w-20">File Link</span>
           <span className="d-link">
-            - <Link target="_blank" to={link}>Click Here</Link>
+            -{" "}
+            <Link target="_blank" to={link}>
+              Click Here
+            </Link>
           </span>
         </p>
         <p className="flex border-b p-2">
@@ -104,7 +127,65 @@ const Downloads = () => {
       {/* safety */}
       <Disclaimer />
       {/* comments */}
-      <Comments />
+      {/* <Comments id={_id} /> */}
+      <div className="py-4">
+        <h3>Comments</h3>
+        {isLoading ? (
+          <MyLoader />
+        ) : (
+          comments?.data.map((comm) => (
+            <div className="p-2 flex gap-2 border-b items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+              <div>
+                <p className="font-medium text-primary">{comm.name}</p>
+                <span className="text-sm italic">{comm.comment}</span>
+              </div>
+            </div>
+          ))
+        )}
+        <form onSubmit={handleSubmit(onSubmit)} className="my-4">
+          <div className="comment">
+            <textarea
+              placeholder="Write your comments..."
+              register
+              {...register("comment", { required: true })}
+              rows={5}
+            ></textarea>
+            <div className="space-y-2">
+              <input
+                type="text"
+                {...register("name", { required: true })}
+                placeholder="Your Name"
+                className="border w-full p-2"
+              />
+              <input
+                type="email"
+                {...register("email", { required: true })}
+                placeholder="Your Email"
+                className="border w-full p-2"
+              />
+              <input
+                type="submit"
+                value={isLoading ? "Submitting" : "SUBMIT"}
+                className="d-btn cursor-pointer"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
     </>
   );
 };

@@ -12,6 +12,7 @@ import Login from "../pages/authentication/Login";
 import Register from "../pages/authentication/Register";
 import PrivetRoute from "./PrivetRoute";
 import ManagePost from "../pages/dashboard/firmwares/ManagePost";
+import ManageComment from "../pages/dashboard/comments/ManageComment";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
         path: "/admin/manage-post",
         element: <ManagePost />,
       },
+      {
+        path: "/admin/comments",
+        element: <ManageComment />
+      }
     ],
   },
   {
