@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         path: "/page/:filename",
         element: <Downloads />,
         loader: ({ params }) =>
-          fetch(`http://localhost:9988/api/firmwares/${params.filename}`),
+          fetch(`https://softfirm-server.vercel.app/api/firmwares/${params.filename}`),
       },
       {
         path: "/spd-tools",

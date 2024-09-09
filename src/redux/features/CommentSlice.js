@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const CommentApi = createApi({
   reducerPath: "CommentApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:9988/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://softfirm-server.vercel.app/api" }),
   tagTypes: ["comment"],
   endpoints: (builder) => ({
     allComments: builder.query({

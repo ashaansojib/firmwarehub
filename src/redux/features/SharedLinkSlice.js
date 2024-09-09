@@ -3,11 +3,13 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const sharedLinkApi = createApi({
   reducerPath: "sharedLinkApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:9988/api",
+    baseUrl: "https://softfirm-server.vercel.app/api",
   }),
+  tagTypes: ["links"],
   endpoints: (builder) => ({
     allSharedLinks: builder.query({
       query: () => "/links",
+      providesTags: ["links"],
     }),
     addSharedLink: builder.mutation({
       query: (data) => ({
@@ -15,8 +17,19 @@ export const sharedLinkApi = createApi({
         method: "POST",
         body: data,
       }),
+      invalidatesTags: ["links"],
+    }),
+    removeSharedLink: builder.mutation({
+      query: (id) => ({
+        url: `/links/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["links"]
     }),
   }),
 });
-export const { useAllSharedLinksQuery, useAddSharedLinkMutation } =
-  sharedLinkApi;
+export const {
+  useAllSharedLinksQuery,
+  useAddSharedLinkMutation,
+  useRemoveSharedLinkMutation,
+} = sharedLinkApi;
