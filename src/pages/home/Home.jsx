@@ -88,23 +88,25 @@ const Home = () => {
               firm // Corrected the chaining issue
             ) => (
               <article key={firm._id} className="post">
-                <h3 className="pb-2">{firm.title}</h3>
-                <div className="space-x-1 text-sm py-1">
-                  <span
-                    className={`px-2 text-white ${
-                      firm.status === "Paid" ? "bg-red-400" : "bg-green-400"
-                    }`}
-                  >
-                    {firm.status}
-                  </span>
-                  <span className="px-2 bg-green-50">{firm.size}</span>
-                  <span className="px-2 bg-orange-50">{firm.chipset}</span>
-                  <span className="px-2 bg-gray-50">
-                    {moment(firm.createdAt).format("DD MMM, YYYY")}
-                  </span>
+                <div>
+                  <h3 className="pb-2">{firm.title}</h3>
+                  <div className="space-x-1 text-sm py-1">
+                    <span
+                      className={`px-2 text-white ${
+                        firm.status === "Paid" ? "bg-red-400" : "bg-green-400"
+                      }`}
+                    >
+                      {firm.status}
+                    </span>
+                    <span className="px-2 bg-green-50">{firm.size}</span>
+                    <span className="px-2 bg-orange-50">{firm.chipset}</span>
+                    <span className="px-2 bg-gray-50">
+                      {moment(firm.createdAt).format("DD MMM, YYYY")}
+                    </span>
+                  </div>
                 </div>
                 <Link to={`/page/${firm.filename}`} className="post-btn">
-                  DOWNLOAD
+                  Read More...
                 </Link>
               </article>
             )
