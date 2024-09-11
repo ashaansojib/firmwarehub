@@ -18,7 +18,7 @@
   @apply max-w-[1100px] mx-auto
 }
 a:hover{
-  @apply text-primary
+  @apply text-primary underline
 }
 p{
   @apply text-secondary
@@ -30,10 +30,10 @@ h3{
   @apply font-semibold
 }
 .active{
-  @apply font-medium md:font-semibold text-sm uppercase px-4 py-3 block md:inline-block bg-slate-100
+  @apply font-medium md:font-semibold text-sm uppercase px-4 py-3 block md:inline-block bg-primary
 }
 .default{
-  @apply font-medium md:font-semibold text-sm uppercase px-4 py-3 block md:inline-block hover:bg-slate-100
+  @apply font-medium md:font-semibold text-sm uppercase px-4 py-3 block md:inline-block hover:bg-primary
 }
 input{
   @apply border py-2 px-3 w-full rounded-md
@@ -59,8 +59,9 @@ textarea:focus{
 }
 
 /* header */
+/* @apply p-2 sticky top-0 left-0 z-30 */
 header{
-  @apply p-2 sticky top-0 left-0 z-30
+  @apply p-2
 }
 /* .title{
   @apply text-2xl font-bold text-primary
@@ -72,9 +73,6 @@ header{
 }
 .post{
   @apply rounded-md bg-secondary mt-2 p-3 border md:flex justify-between items-center
-}
-.post-btn{
-  @apply hover:underline
 }
 .d-btn{
   @apply border text-sm px-4 font-medium bg-primary py-1
@@ -111,5 +109,5 @@ header{
 
 /* sidebar */
 .aside-item{
-  @apply p-2 bg-secondary border
-}
+  @apply p-2 bg-secondary border rounded-md
+} 

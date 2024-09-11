@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaGithub, FaWhatsapp } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -8,7 +9,7 @@ const Footer = () => {
                 <div>
                     <p>Site Links</p>
                     <ul className='footer-link'>
-                        <li>USB Driver</li>
+                        <Link to="/">USB Driver</Link>
                         <li>Privacy Policy</li>
                         <li>Terms & Condition</li>
                     </ul>

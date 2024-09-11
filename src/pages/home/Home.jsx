@@ -105,7 +105,7 @@ const Home = () => {
                     </span>
                   </div>
                 </div>
-                <Link to={`/page/${firm.filename}`} className="post-btn">
+                <Link to={`/page/${firm.filename}`}>
                   Read More...
                 </Link>
               </article>

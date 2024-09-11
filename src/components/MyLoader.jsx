@@ -4,7 +4,7 @@ import { Discuss } from "react-loader-spinner";
 const MyLoader = () => {
   return (
     <section className="relative">
-      <div className="absolute z-20 bg-slate-50 w-full md:h-[530px] h-screen bg-opacity-80 flex justify-center items-center">
+      <div className="absolute z-20 w-full md:h-[530px] h-screen bg-opacity-80 flex justify-center items-center">
         <Discuss
           visible={true}
           height="80"
