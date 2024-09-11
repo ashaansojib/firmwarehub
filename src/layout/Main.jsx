@@ -10,7 +10,7 @@ const Main = () => {
       <Header />
       <div className="bg-primary">
         <div className="home-container">
-          <div className="p-2 md:p-0">
+          <div className="p-2 md:p-0 sticky top-0 left-0 h-full">
             <Aside />
           </div>
           <div className="w-full p-2 md:p-0">

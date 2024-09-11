@@ -2,7 +2,7 @@ import React from "react";
 
 const Steps = () => {
   return (
-    <div className="p-4 bg-primary">
+    <div className="bg-primary">
       <h3>Guidelines:</h3>
       <ul className="space-y-4">
         <li className="flex gap-1">

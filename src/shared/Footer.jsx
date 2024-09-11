@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className='text-secondary bg-slate-100'>
-            <div className='p-2 grid grid-cols-1 md:grid-cols-3 justify-between my-container border-b'>
+            {/* <div className='p-2 grid grid-cols-1 md:grid-cols-3 justify-between my-container border-b'>
                 <div>
                     <p>Site Links</p>
                     <ul className='footer-link'>
@@ -30,8 +30,8 @@ const Footer = () => {
                     <FaFacebookF className='text-2xl'/>
                     </ul>
                 </div>
-            </div>
-            <p className='text-center py-4 '>2024@ Owner by Sojib | in Bangladesh</p>
+            </div> */}
+            <p className='text-center py-4 text-sm'>2024@ Develop by <Link to="https://www.facebook.com/khusbusojib/" target='_blank' className='underline'>Sojib</Link> | in Bangladesh</p>
         </footer>
     );
 };

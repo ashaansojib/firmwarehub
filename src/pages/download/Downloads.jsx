@@ -128,7 +128,7 @@ const Downloads = () => {
       <Disclaimer />
       {/* comments */}
       {/* <Comments id={_id} /> */}
-      <div className="py-4">
+      <div className="py-2">
         <h3>Comments</h3>
         {isLoading ? (
           <MyLoader />
@@ -156,7 +156,7 @@ const Downloads = () => {
             </div>
           ))
         )}
-        <form onSubmit={handleSubmit(onSubmit)} className="my-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="my-2">
           <div className="comment">
             <textarea
               placeholder="Write your comments..."

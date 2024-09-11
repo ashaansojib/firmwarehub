@@ -4,7 +4,7 @@ import Drivers from '../pages/home/Drivers';
 
 const Aside = () => {
     return (
-        <aside className='py-2 md:w-[300px] space-y-4'>
+        <aside className='py-3 md:w-[300px] space-y-4'>
             <img className='w-full cursor-pointer' src="/any-tool.png" alt="" />
             {/* recent post */}
             <RecentPost />
