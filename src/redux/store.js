@@ -15,10 +15,10 @@ export const store = configureStore({
     [sharedLinkApi.reducerPath]: sharedLinkApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat([
+    getDefaultMiddleware().concat(
       usersApi.middleware,
       postApi.middleware,
       CommentApi.middleware,
-      sharedLinkApi.middleware,
-    ]),
+      sharedLinkApi.middleware
+    ),
 });

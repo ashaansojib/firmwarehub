@@ -3,10 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 const FileLinkSlice = createSlice({
   name: "fileLink",
   initialState: {
-    link: null,
+    link: "",
   },
   reducers: {
-    seFileLink: (state, action) => {
+    setFileLink: (state, action) => {
       state.link = action.payload;
     },
   },

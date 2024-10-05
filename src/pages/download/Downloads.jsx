@@ -14,10 +14,6 @@ import { setFileLink } from "../../redux/features/FileLinkSlice";
 
 const Downloads = () => {
   const dispatch = useDispatch();
-  const setDownloadLink = (link) => {
-    dispatch(setFileLink(link));
-  };
-
   const [addComment, { isLoading }] = useAddCommentMutation();
   const data = useLoaderData();
   const {
@@ -43,12 +39,17 @@ const Downloads = () => {
     formState: { errors },
   } = useForm();
 
+  const handleAddDownloadLink = () => {
+    dispatch(setFileLink(link));
+  };
+
   const { data: comments } = useGetCommentsQuery({ id: _id });
   const onSubmit = (data) => {
     data.postId = _id;
     addComment(data);
     reset();
   };
+
   return (
     <>
       {/* breadcumb tags */}
@@ -106,11 +107,10 @@ const Downloads = () => {
         <p className="info-label">
           <span className="w-20">File Link</span>
           <span className="d-link">
-            -{" "}
             <Link
-              target="_blank"
+              // target="_blank"
               to="/downloads"
-              onClick={() => setDownloadLink(link)}
+              onClick={handleAddDownloadLink}
             >
               Click Here
             </Link>
