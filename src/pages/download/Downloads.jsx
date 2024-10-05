@@ -9,8 +9,15 @@ import {
   useGetCommentsQuery,
 } from "../../redux/features/CommentSlice";
 import MyLoader from "../../components/MyLoader";
+import { useDispatch } from "react-redux";
+import { setFileLink } from "../../redux/features/FileLinkSlice";
 
 const Downloads = () => {
+  const dispatch = useDispatch();
+  const setDownloadLink = (link) => {
+    dispatch(setFileLink(link));
+  };
+
   const [addComment, { isLoading }] = useAddCommentMutation();
   const data = useLoaderData();
   const {
@@ -100,7 +107,11 @@ const Downloads = () => {
           <span className="w-20">File Link</span>
           <span className="d-link">
             -{" "}
-            <Link target="_blank" to="/downloads">
+            <Link
+              target="_blank"
+              to="/downloads"
+              onClick={() => setDownloadLink(link)}
+            >
               Click Here
             </Link>
           </span>
