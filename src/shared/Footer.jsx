@@ -31,7 +31,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div> */}
-            <p className='text-center py-4 text-sm'>2024@ Develop by <Link to="https://www.facebook.com/khusbusojib/" target='_blank' className='underline'>Sojib</Link> | in Bangladesh</p>
+            <p className='text-center py-4 text-sm'>2024@ Develop by <Link to="https://www.facebook.com/ashaansojib/" target='_blank' className='underline'>Sojib</Link> | in Bangladesh</p>
         </footer>
     );
 };

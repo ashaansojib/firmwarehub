@@ -58,7 +58,7 @@ const Blogs = () => {
             <span>
               {" "}
               <Link to="/" className="text-primary">
-                Ashaduzzaman
+                Sojib
               </Link>
             </span>
           </p>

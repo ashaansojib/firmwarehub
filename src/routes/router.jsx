@@ -14,6 +14,7 @@ import PrivetRoute from "./PrivetRoute";
 import ManagePost from "../pages/dashboard/firmwares/ManagePost";
 import ManageComment from "../pages/dashboard/comments/ManageComment";
 import SharedLinks from "../pages/dashboard/links/SharedLinks";
+import DownloadLoader from "../components/DownloadLoader";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         path: "/blogs",
         element: <Blogs />,
       },
+      {
+        path: '/downloads',
+        element: <DownloadLoader />
+      }
     ],
   },
   {

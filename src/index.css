@@ -71,6 +71,9 @@ header{
 .home-container{
   @apply flex md:flex-row md:justify-between gap-8 justify-center flex-col-reverse my-container relative
 }
+.info-label{
+  @apply flex border-b p-2
+}
 .post{
   @apply rounded-md bg-secondary mt-2 p-3 border md:flex justify-between items-center
 }

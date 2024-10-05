@@ -7,10 +7,10 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Upcoming from "../sidebar/Upcoming";
 import { useGetFirmwaresQuery } from "../../redux/features/PostSlice";
 import MyLoader from "../../components/MyLoader";
 import moment from "moment";
+import Upcoming from "./Upcoming";
 
 const Home = () => {
   const [search, setSearch] = useState("");

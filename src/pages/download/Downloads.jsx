@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
-import Comments from "./Comments";
 import Steps from "./Steps";
 import Disclaimer from "./Disclaimer";
 import moment from "moment";
@@ -33,12 +32,11 @@ const Downloads = () => {
   const {
     register,
     handleSubmit,
-    watch,
     reset,
     formState: { errors },
   } = useForm();
 
-  const { data: comments, refetch } = useGetCommentsQuery({ id: _id });
+  const { data: comments } = useGetCommentsQuery({ id: _id });
   const onSubmit = (data) => {
     data.postId = _id;
     addComment(data);
@@ -70,51 +68,51 @@ const Downloads = () => {
       {/* features area */}
       <h3>Features of Firmware:</h3>
       <div className="pb-4">
-        <p className="border-b p-2 flex">
+        <p className="info-label">
           <span className="w-20">Brand</span>
           <span className="italic"> - {brand}</span>
         </p>
-        <p className="flex border-b p-2">
+        <p className="info-label">
           <span className="w-20">Model</span>
           <span className="italic"> - {model}</span>
         </p>
-        <p className="flex border-b p-2">
+        <p className="info-label">
           <span className="w-20">Chipset</span>
           <span className="italic"> - {chipset}</span>
         </p>
-        <p className="flex border-b p-2">
+        <p className="info-label">
           <span className="w-20">FileName</span>
           <span className="italic"> - {version}</span>
         </p>
-        <p className="flex border-b p-2">
+        <p className="info-label">
           <span className="w-20">Size</span>
           <span className="italic"> - {size}</span>
         </p>
-        <p className="flex border-b p-2">
+        <p className="info-label">
           <span className="w-20">Price</span>
           <span className="italic"> - {price} BDT</span>
         </p>
-        <p className="flex border-b p-2">
+        <p className="info-label">
           <span className="w-20">Password</span>
           <span className="italic"> - {status}</span>
         </p>
-        <p className="flex border-b p-2">
+        <p className="info-label">
           <span className="w-20">File Link</span>
           <span className="d-link">
             -{" "}
-            <Link target="_blank" to={link}>
+            <Link target="_blank" to="/downloads">
               Click Here
             </Link>
           </span>
         </p>
-        <p className="flex border-b p-2">
+        <p className="info-label">
           <span className="w-20">Drivers</span>
           <span className="d-link">
             {" "}
             - <Link to="/">Click Here</Link>
           </span>
         </p>
-        <p className="flex border-b p-2">
+        <p className="info-label">
           <span className="w-20">Flash Tool</span>
           <span className="d-link">
             {" "}

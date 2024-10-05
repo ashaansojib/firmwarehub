@@ -1,11 +1,11 @@
 import React from 'react';
 import RecentPost from '../pages/sidebar/RecentPost';
-import Drivers from '../pages/home/Drivers';
+import Drivers from '../pages/sidebar/Drivers';
 
 const Aside = () => {
     return (
         <aside className='py-3 md:w-[300px] space-y-4'>
-            <img className='w-full cursor-pointer' src="/any-tool.png" alt="" />
+            {/* <img className='w-full cursor-pointer' src="/any-tool.png" alt="" /> */}
             {/* recent post */}
             <RecentPost />
             <Drivers />
