@@ -11,6 +11,7 @@ import {
 import MyLoader from "../../components/MyLoader";
 import { useDispatch } from "react-redux";
 import { setFileLink } from "../../redux/features/FileLinkSlice";
+import AuthorProfile from "../../components/AuthorProfile";
 
 const Downloads = () => {
   const dispatch = useDispatch();
@@ -137,6 +138,8 @@ const Downloads = () => {
       <Disclaimer />
       {/* comments */}
       {/* <Comments id={_id} /> */}
+      {/* author profile */}
+      <AuthorProfile />
       <div className="py-2">
         <h3>Comments</h3>
         {isLoading ? (
