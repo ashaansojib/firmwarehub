@@ -9,8 +9,23 @@ const AuthorProfile = () => {
       </div>
       <div>
         <h3>Md. Ashaduzzaman Sojib</h3>
-        <Link>Portfolio </Link>|<Link> Linkedin </Link>|<Link> Whatsapp</Link>
-        <p><span className="text-black">Work At</span>- Web Developer | Sr. Mobile Software Technician</p>
+        <Link to="https://ashaduzzaman-sojib.netlify.app/" target="_blank">
+          Portfolio{" "}
+        </Link>
+        |
+        <Link to="https://www.linkedin.com/in/ashaansojib/" target="_blank">
+          {" "}
+          Linkedin{" "}
+        </Link>
+        |
+        <Link to="https://wa.me/+8801892932859" target="_blank">
+          {" "}
+          Whatsapp
+        </Link>
+        <p>
+          <span className="text-black">Work At</span>- Web Developer | Sr.
+          Mobile Software Technician
+        </p>
       </div>
     </div>
   );
