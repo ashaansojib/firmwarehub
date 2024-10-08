@@ -32,7 +32,7 @@ const DownloadLoader = () => {
   };
   return (
     <div className="p-2">
-      <div className="">
+      <div>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit,
           modi beatae. Consectetur ad sequi exercitationem assumenda ipsa,
@@ -45,7 +45,7 @@ const DownloadLoader = () => {
         {showMessage ? (
           <>
           <p className="text-blue-500">Your File is Ready...</p>
-          <Link to="/">Download Now</Link>
+          <Link to={fileLink} target="_blank">Download Now</Link>
           </>          
         ) : (
           <>

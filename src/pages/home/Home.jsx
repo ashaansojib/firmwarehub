@@ -85,7 +85,7 @@ const Home = () => {
           })
           .map(
             (
-              firm // Corrected the chaining issue
+              firm
             ) => (
               <article key={firm._id} className="post">
                 <div>
