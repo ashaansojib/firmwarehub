@@ -15,6 +15,7 @@ import ManagePost from "../pages/dashboard/firmwares/ManagePost";
 import ManageComment from "../pages/dashboard/comments/ManageComment";
 import SharedLinks from "../pages/dashboard/links/SharedLinks";
 import DownloadLoader from "../components/DownloadLoader";
+import Users from "../pages/dashboard/users/Users";
 
 const router = createBrowserRouter([
   {
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
       {
         path: "/admin/links",
         element: <SharedLinks />
+      },
+      {
+        path: "/admin/users",
+        element: <Users />
       }
     ],
   },
