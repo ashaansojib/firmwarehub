@@ -59,13 +59,14 @@ const SharedLinks = () => {
             SharedLink?.data.map((item) => (
               <div key={item._id}>
                 <p>{item.title}</p>
-                <span className="italic text-sm">{item.url} </span>
+                <span className="text-red-500">{item.category}</span>
                 <span
                   onClick={() => handleRemove(item._id)}
-                  className="p-1 bg-primary rounded-md text-red-500"
+                  className="p-1 bg-primary rounded-md text-red-500 mx-2"
                 >
                   Remove
                 </span>
+                <span className="italic text-sm text-gray-400">{item.url} </span>
               </div>
             ))
           )}
