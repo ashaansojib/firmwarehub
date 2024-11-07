@@ -24,7 +24,12 @@ export const sharedLinkApi = createApi({
         url: `/links/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: ["links"]
+      invalidatesTags: ["links"],
+    }),
+    sharedLinkByCat: builder.query({
+      query: (cat) => ({
+        url: `/links/${cat}`,
+      }),
     }),
   }),
 });
@@ -32,4 +37,5 @@ export const {
   useAllSharedLinksQuery,
   useAddSharedLinkMutation,
   useRemoveSharedLinkMutation,
+  useSharedLinkByCatQuery,
 } = sharedLinkApi;

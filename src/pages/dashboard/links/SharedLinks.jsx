@@ -57,7 +57,7 @@ const SharedLinks = () => {
             <MyLoader />
           ) : (
             SharedLink?.data.map((item) => (
-              <div key={item._id}>
+              <div key={item._id} className="border p-2 mb-1 rounded-md">
                 <p>{item.title}</p>
                 <span className="text-red-500">{item.category}</span>
                 <span

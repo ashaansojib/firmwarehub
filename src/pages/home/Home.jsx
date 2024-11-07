@@ -37,6 +37,11 @@ const Home = () => {
   return (
     <div className="py-2">
       <Upcoming />
+      <div className="flex gap-2 items-center py-4">
+        <button className="brand-btn">Xiaomi</button>
+        <button className="brand-btn-active">Vivo</button>
+        <button className="brand-btn">Realme</button>
+      </div>
       <div className="flex flex-col-reverse md:flex-row justify-between gap-2">
         <input
           type="text"
